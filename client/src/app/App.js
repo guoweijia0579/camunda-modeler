@@ -1259,6 +1259,10 @@ export class App extends Component {
     this.logEntry(`Deploy error: ${JSON.stringify(error)}`, 'deploy-error');
   }
 
+  loadConfig = (key, ...args) => {
+    return this.props.globals.config.get(key, this.state.activeTab, ...args);
+  }
+
   quit() {
     return true;
   }
@@ -1397,6 +1401,7 @@ export class App extends Component {
                   onContextMenu={ this.openTabMenu }
                   onAction={ this.triggerAction }
                   onModal={ this.openModal }
+                  onLoadConfig={ this.loadConfig }
                   ref={ this.tabRef }
                 />
               }
