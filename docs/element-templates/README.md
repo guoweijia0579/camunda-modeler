@@ -337,7 +337,8 @@ Other templates may not be applied, once an element is subject to a default temp
 
 When creating custom element templates the modeler will give you detailed validation error messages.
 
-Templates will be loaded on application load and reload. To reload the application with updated templates, open the developer tools `F12` and press `CtrlOrCmd+R`. This will clear all unsaved diagrams **!**
+Templates will be automatically updated on every tab or sheet change.
+**!**
 
 
 ## Supported BPMN Types
